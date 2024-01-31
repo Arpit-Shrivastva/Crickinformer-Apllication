@@ -1,0 +1,23 @@
+<div class="table-container">
+        <h1 class="text-4xl font-extrabold text-gray-800 px-2">Point Table</h1>
+    
+        <table class="text-center mt-8 min-w-full bg-white border border-gray-300 rounded-lg overflow-hidden">
+            <thead class="bg-gray-200 text-gray-700">
+                <tr >
+                <div *ngFor = "let headings of tableHeading, let i = index">
+                    <div *ngIf="i === 0"></div>
+                    <th class="py-2 px-4 border-b">{{headings [0]}}</th>
+                </div>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hover:bg-gray-100">
+                    <div *ngFor="let tableRows of pointTable">
+                        <td class="py-2 px-4 border-b">{{tableRows}}</td>
+                    </div>
+                </tr>
+               
+            </tbody>
+        </table>
+</div>
